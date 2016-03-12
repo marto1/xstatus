@@ -9,9 +9,9 @@
 #define STDIN_BUFFER_SIZE 40
 
 /*
-  xstatus <parent> <- will embed the window to the specified parentx
-  stdin is read and when null terminator
-  is read make the chars before that the new title.
+  xstatus <parent> <- will embed the window to the specified parent,
+  stdin is read on data arrival(!) and received data becomes
+  the new title.
 */
 
 int
