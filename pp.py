@@ -49,7 +49,6 @@ def change_date(bar):
     update_title(bar)
 
 def notify_power(ignored, filepath, mask):
-    print "CHANGE!!!"
     change_power(BARTEXT)
 
 def set_power_state(bar, states, r):
