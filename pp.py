@@ -35,6 +35,7 @@ class SKBControl(protocol.ProcessProtocol):
 
     def outReceived(self, data):
         BARTEXT[-1] = data[:-1]
+        update_bartext()
 
     def errReceived(self, data):
         sys.stderr.out("process error:{0}".format(data))
