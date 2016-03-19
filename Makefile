@@ -30,7 +30,7 @@ config.h:
 
 clean:
 	@echo cleaning
-	@rm -f ${BIN} ${OBJ} 
+	@rm -f ${BIN} ${OBJ} *.pyc
 
 dist: clean
 	@echo creating dist tarball
