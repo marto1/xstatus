@@ -1,3 +1,9 @@
+/*
+   See LICENSE file for copyright and license details. 
+   xstatus <parent> <- will embed the window to the specified parent,
+   stdin is read on data arrival(!) and received data becomes
+   the new title.
+*/
 #include <X11/Xlib.h>
 #include <unistd.h>
 #include <stdio.h>
@@ -6,13 +12,7 @@
 #include <errno.h>
 #include <limits.h>
 #include <poll.h>
-#define STDIN_BUFFER_SIZE 40
-
-/*
-  xstatus <parent> <- will embed the window to the specified parent,
-  stdin is read on data arrival(!) and received data becomes
-  the new title.
-*/
+#include "config.h"
 
 int
 main(int argc, char *argv[])

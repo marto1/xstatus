@@ -20,6 +20,7 @@ BARTEXT = ["conn-status", "⚡", "time", "lang"]
 SEP = " "
 
 CONNECTION_MAP = {
+    10: CONNECTION_STATES[0],
     20: CONNECTION_STATES[0],
     30: CONNECTION_STATES[1],
     40: CONNECTION_STATES[2],

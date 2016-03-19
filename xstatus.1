@@ -1,0 +1,25 @@
+.TH XSTATUS 1 xstatus\-VERSION
+.SH NAME
+xstatus \- dynamic title window
+.SH SYNOPSIS
+.B xstatus
+.IR "windowID"
+.SH DESCRIPTION
+.B xstatus 
+lets you embed a window with dynamic title into another X window.
+.SH EXAMPLES
+.TP
+$ (while sleep 1; do date; done) | ./xstatus 0x4000003
+.SH CUSTMIZATION
+.B xstatus
+can be customized by creating a custom 
+config.h and (re)compiling the source
+code. This keeps it fast, secure and simple.
+.SH AUTHORS
+See the LICENSE file for the authors.
+.SH LICENSE
+See the LICENSE file for the terms of redistribution.
+.SH SEE ALSO
+.BR xembed (1)
+.SH BUGS
+Please report them.
