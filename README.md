@@ -1,4 +1,4 @@
-Embed a window with dynamic title that can be embedded into another X window.
+A window with dynamic title that can be embedded into another X window.
 
 Build with make. Template from tabbed's Makefile. 
 
