@@ -1,4 +1,4 @@
-Embed a window with dynamic title into another X window.
+Embed a window with dynamic title that can be embedded into another X window.
 
 Build with make. Template from tabbed's Makefile. 
 
@@ -6,8 +6,9 @@ Depends on: xlib
 
 Usage: xstatus \<id of parent window\>
 
+Example to get date in separate window: (while sleep 1; do date; done) | ./xstatus
 
-Example usage: (while sleep 1; do date; done) | ./xstatus <0xid of window> 
+Example to get date in embedded tab: (while sleep 1; do date; done) | ./xstatus <0xid of window> 
 
 Example usage in tabbed: python pp.py | ./xstatus <0xid of tabbed> 
 
