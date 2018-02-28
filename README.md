@@ -21,6 +21,11 @@ Get date in embedded tab: `(while sleep 1; do date; done) | ./xstatus <0xid of w
 
 Usage in tabbed: `python pp.py | ./xstatus <0xid of tabbed>`
 
+Demo
+====
+
 ![Alt Text](https://raw.githubusercontent.com/marto1/xstatus/master/exmp1.png)
+
+
 
 
