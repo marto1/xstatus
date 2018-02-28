@@ -15,7 +15,7 @@ import pretty_dbus as pd
 
 #Install https://github.com/polachok/skb for language switch indication
 LANGUAGE_SWITCH = "/usr/bin/skb"
-TIME_TICK=20 #seconds
+TIME_TICK=1 #seconds
 CONNECTION_STATES = ["⚪⚪⚪", "⚫⚪⚪", "⚫⚫⚪", "⚫⚫⚫"]
 POWER_STATES = ["⚡", "⚙"]
 BARTEXT = ["conn-status", "⚡", "time", "lang"]
@@ -74,6 +74,11 @@ nmnger_iface = DBusInterface(
     'org.freedesktop.NetworkManager',
     Method('state', '', 'u'),
     Signal('StateChanged', 'u'))
+
+# xchat_iface = DBusInterface(
+#     'org.xchat.plugin',,
+#     Signal('StateChanged', 'u'))
+
 
 def change_date(bar):
     bar[-2] = strftime("%R %d/%m")
@@ -134,6 +139,13 @@ if __name__ == '__main__':
         "/org/freedesktop/NetworkManager",
         "state",
         set_bartext_network_state)
+    # chat = (
+    #     update,
+    #     "system",
+    #     "org.freedesktop.UPower",
+    #     "/org/freedesktop/UPower/devices/line_power_AC",
+    #     "Online",
+    #     set_bartext_power_state)
     rcall(*powernotif)
     rcall(*nnotif)
     rcall(*getpower)
